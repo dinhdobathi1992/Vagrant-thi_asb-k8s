@@ -2,3 +2,4 @@
 .vagrant/
 kubernetes/join-command
 kubernetes/node-playbook.retry
+*.log
