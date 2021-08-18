@@ -1,0 +1,15 @@
+---
+packages_https:
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - software-properties-common 
+  - gnupg2
+
+packages_container:
+  - containerd
+
+packages_kubernetes:
+  - kubelet=1.20.0-00
+  - kubeadm=1.20.0-00
+  - kubectl=1.20.0-00
