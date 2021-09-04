@@ -1,1 +1,0 @@
-kubeadm join 192.168.50.10:6443 --token atctcr.afns4qecqa4xjgon     --discovery-token-ca-cert-hash sha256:1f0c5b3b0699ae002d9ebd3b1bf2db249d0b2686e9be75642f84573230d0b653 
