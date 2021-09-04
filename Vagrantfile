@@ -5,7 +5,7 @@ Vagrant.configure("2") do |config|
     config.ssh.insert_key = false
     config.vbguest.auto_update = false
     config.vm.provider "virtualbox" do |v|
-        v.memory = 2048
+        v.memory = 3048
         v.cpus = 2
     end
       

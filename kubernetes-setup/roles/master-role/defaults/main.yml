@@ -6,10 +6,10 @@ packages_https:
   - software-properties-common 
   - gnupg2
 
-packages_container:
+packages_containerd:
   - containerd
 
-packages_kubernetes:
+packages_kubeversion:
   - kubelet=1.20.0-00
   - kubeadm=1.20.0-00
   - kubectl=1.20.0-00

@@ -7,7 +7,7 @@
     
 - name: Install containerd
   apt: 
-    name: "{{ packages_container }}"
+    name: "{{ packages_containerd }}"
     state: present
     update_cache: yes
 
@@ -37,7 +37,7 @@
 
 - name: Install Kubernetes binaries
   apt: 
-    name: "{{ packages_kubernetes }}"
+    name: "{{ packages_kubeversion }}"
     state: present
     update_cache: yes
 
@@ -75,7 +75,7 @@
     line: Environment="KUBELET_EXTRA_ARGS=--node-ip={{ output.stdout }}"
 
 - name: Initialize the Kubernetes cluster using kubeadm
-  command: kubeadm init --apiserver-advertise-address="192.168.50.10" --apiserver-cert-extra-sans="192.168.50.10" --pod-network-cidr=172.16.0.0/16
+  command: kubeadm init --apiserver-advertise-address="{{ output.stdout }}" --apiserver-cert-extra-sans="{{ output.stdout }}" --pod-network-cidr=172.16.0.0/16
 
 - name: Create kube directory
   file:
